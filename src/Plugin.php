@@ -43,7 +43,7 @@ class Plugin implements PluginInterface
 
             if (isset($output_path)) {
                 $content = strtr(
-                    file_get_contents(__DIR__ . '/ComposerLocator.tpl.php'),
+                    file_get_contents(__DIR__ . '/ComposerLocator.tpl'),
                     [
                         '$DATE'  => date('Y-m-d H:i:s'),
                         '$PATHS' => preg_replace('/\s+/', " ", var_export($paths, true)),
